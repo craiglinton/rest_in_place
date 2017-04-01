@@ -219,7 +219,7 @@ RestInPlaceEditor.forms =
     activateForm : ->
       value = $.trim(@elementHTML())
       @$element.html("""<form action="javascript:void(0)" style="display:inline;">
-        <textarea class="rest-in-place-#{@attributeName}" placeholder="#{@placeholder}"></textarea>
+        <textarea class="rest-in-place-#{@attributeName} form-control no-borders" rows="5" placeholder="#{@placeholder}"></textarea>
         </form>""")
       @$element.find('textarea').val(value)
       @$element.find('textarea')[0].select()
